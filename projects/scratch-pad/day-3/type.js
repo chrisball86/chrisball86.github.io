@@ -15,7 +15,7 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    return Array.isArray(value);
     
     
     // YOUR CODE ABOVE HERE //
@@ -32,6 +32,17 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
+    if (Array.isArray(value))
+    return false;
+    
+    if (value === null)
+    return false;
+    
+    if (value instanceof Date)
+    return false;
+    
+    if (typeof value === "object") 
+    return true;
     
     
     
